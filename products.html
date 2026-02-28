@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk - SecondLife.id</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#22c55e',
+                        secondary: '#f5f5dc',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white">
+    <div id="navbar"></div>
+    
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Search Bar -->
+        <div class="mb-8">
+            <div class="relative">
+                <input 
+                    type="text" 
+                    id="searchInput"
+                    placeholder="Cari produk..." 
+                <input 
+                    type="text" 
+                    id="searchInput"
+                    placeholder="Cari produk..." 
+                    class="w-full px-6 py-4 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent shadow-sm"
+                />
+                <i class="fas fa-search absolute right-6 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+            <!-- Sidebar Filter -->
+            <aside class="lg:w-64 flex-shrink-0">
+                <div class="bg-white rounded-xl shadow-sm p-6 sticky top-24">
+                    <h3 class="font-bold text-lg mb-4">Filter Kategori</h3>
+                    <div class="space-y-3">
+                        <label class="flex items-center cursor-pointer hover:bg-gray-50 p-2 rounded-lg transition">
+                            <input type="radio" name="category" value="all" checked class="w-4 h-4 text-primary">
+                            <span class="ml-3 text-gray-700">Semua Kategori</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer hover:bg-gray-50 p-2 rounded-lg transition">
+                            <input type="radio" name="category" value="elektronik" class="w-4 h-4 text-primary">
+                            <span class="ml-3 text-gray-700">📱 Elektronik</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer hover:bg-gray-50 p-2 rounded-lg transition">
+                            <input type="radio" name="category" value="elektronik" class="w-4 h-4 text-primary">
+                            <span class="ml-3 text-gray-700"><i class="fas fa-mobile-alt text-primary mr-2"></i>Elektronik</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer hover:bg-gray-50 p-2 rounded-lg transition">
+                            <input type="radio" name="category" value="fashion" class="w-4 h-4 text-primary">
+                            <span class="ml-3 text-gray-700"><i class="fas fa-tshirt text-primary mr-2"></i>Fashion</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer hover:bg-gray-50 p-2 rounded-lg transition">
+                            <input type="radio" name="category" value="rumah" class="w-4 h-4 text-primary">
+                            <span class="ml-3 text-gray-700"><i class="fas fa-home text-primary mr-2"></i>Rumah</span>
+                        </label>
+                        <label class="flex items-center cursor-pointer hover:bg-gray-50 p-2 rounded-lg transition">
+                            <input type="radio" name="category" value="buku" class="w-4 h-4 text-primary">
+                            <span class="ml-3 text-gray-700"><i class="fas fa-book text-primary mr-2"></i>Buku</span>
+                        </label>
+            <!-- Product Grid -->
+            <div class="flex-1">
+                <div class="mb-6 flex justify-between items-center">
+                    <p class="text-gray-600"><span id="productCount">0</span> produk ditemukan</p>
+                    <select class="px-4 py-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary">
+                        <option>Terbaru</option>
+                        <option>Harga Terendah</option>
+                        <option>Harga Tertinggi</option>
+                    </select>
+                </div>
+                
+                <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    <!-- Products will be rendered here -->
+                </div>
+
+                <div id="noResults" class="hidden text-center py-16">
+                    <div class="text-6xl mb-4">🔍</div>
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">Produk tidak ditemukan</h3>
+                    <p class="text-gray-500">Coba kata kunci atau filter lain</p>
+                <div id="noResults" class="hidden text-center py-16">
+                    <i class="fas fa-search text-6xl text-gray-300 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-700 mb-2">Produk tidak ditemukan</h3>
+                    <p class="text-gray-500">Coba kata kunci atau filter lain</p>
+                </div>
+    <div id="footer"></div>
+
+    <script src="components/Navbar.js"></script>
+    <script src="components/Footer.js"></script>
+    <div id="footer"></div>
+
+    <script src="js/auth.js"></script>
+    <script>protectPage();</script>
+    <script src="components/Navbar.js"></script>
+    <script src="components/Footer.js"></script>
+    <script src="js/products.js"></script>
