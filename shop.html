@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belanja - SecondLife.id</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#22c55e',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white">
+    <div id="navbar"></div>
+    
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Breadcrumb -->
+        <div class="mb-6">
+            <nav class="flex text-sm text-gray-600">
+                <a href="index.html" class="hover:text-primary">Beranda</a>
+                <span class="mx-2">/</span>
+                <span class="text-gray-900 font-medium">Belanja</span>
+            </nav>
+        </div>
+
+        <!-- Page Title -->
+        <div class="mb-6">
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">Belanja Produk</h1>
+            <p class="text-gray-600">Temukan barang berkualitas dengan harga terbaik</p>
+        </div>
+
+        <!-- Search & Filter Bar -->
+        <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-4 mb-6">
+            <div class="flex flex-col md:flex-row gap-4">
+                <!-- Search -->
+                <div class="flex-1">
+                    <div class="relative">
+                        <input 
+                            type="text" 
+                            id="searchInput"
+                            placeholder="Cari produk..." 
+                            class="w-full px-4 py-3 pr-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                        />
+                        <i class="fas fa-search absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                    </div>
+                </div>
+                
+                <!-- Category Filter -->
+                <select id="categoryFilter" class="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                    <option value="all">Semua Kategori</option>
+                    <option value="elektronik">Elektronik</option>
+                    <option value="fashion">Fashion</option>
+                    <option value="rumah">Rumah</option>
+                    <option value="buku">Buku</option>
+                </select>
+                
+                <!-- Sort -->
+                <select id="sortFilter" class="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                    <option value="newest">Terbaru</option>
+                    <option value="price-low">Harga Terendah</option>
+                    <option value="price-high">Harga Tertinggi</option>
+                    <option value="popular">Terpopuler</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Results Info -->
+        <div class="mb-6 flex justify-between items-center">
+            <p class="text-gray-600"><span id="productCount" class="font-semibold text-gray-900">0</span> produk ditemukan</p>
+        </div>
+
+        <!-- Product Grid -->
+        <div id="productGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mb-8">
+            <!-- Products will be rendered here -->
+        </div>
+
+        <!-- No Results -->
+        <div id="noResults" class="hidden text-center py-16">
+            <i class="fas fa-search text-6xl text-gray-300 mb-4"></i>
+            <h3 class="text-xl font-semibold text-gray-700 mb-2">Produk tidak ditemukan</h3>
+            <p class="text-gray-500">Coba kata kunci atau filter lain</p>
+        </div>
+        </main>
+
+    <script src="js/auth.js"></script>
+    <script>protectPage();</script>
+    <script src="components/Navbar.js"></script>
+    <script src="js/shop.js"></script>
+</body>
+</html>

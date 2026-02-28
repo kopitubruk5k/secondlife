@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar - SecondLife.id</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#22c55e',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <div class="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-md w-full">
+            <!-- Logo -->
+            <div class="text-center mb-8">
+                <img src="assets/logo.png" alt="SecondLife.id" class="h-16 mx-auto mb-4">
+                <h2 class="text-3xl font-bold text-gray-900">Daftar Akun Baru</h2>
+                <p class="mt-2 text-gray-600">Sudah punya akun? <a href="login.html" class="text-primary font-semibold hover:text-green-700">Masuk</a></p>
+            </div>
+
+            <!-- Register Form -->
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
+                <form id="registerForm" class="space-y-6">
+                    <!-- Nama Lengkap -->
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Nama Lengkap</label>
+                        <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Masukkan nama lengkap">
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Email</label>
+                        <input type="email" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Masukkan email">
+                    </div>
+
+                    <!-- Nomor HP -->
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Nomor HP</label>
+                        <input type="tel" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="08xxxxxxxxxx">
+                    </div>
+
+                    <!-- Password -->
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Password</label>
+                        <input type="password" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Minimal 8 karakter">
+                    </div>
+
+                    <!-- Confirm Password -->
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Konfirmasi Password</label>
+                        <input type="password" required class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Ulangi password">
+                    </div>
+
+                    <!-- Terms -->
+                    <div class="flex items-start">
+                        <input type="checkbox" required class="w-4 h-4 mt-1 text-primary border-gray-300 rounded focus:ring-primary">
+                        <label class="ml-2 text-sm text-gray-600">
+                            Saya setuju dengan <a href="#" class="text-primary hover:text-green-700 font-medium">Syarat & Ketentuan</a> dan <a href="#" class="text-primary hover:text-green-700 font-medium">Kebijakan Privasi</a>
+                        </label>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="w-full bg-primary text-white font-semibold py-3 rounded-xl hover:bg-green-700 transition shadow-md">
+                        Daftar
+                    </button>
+
+                    <!-- Divider -->
+                    <div class="relative my-6">
+                        <div class="absolute inset-0 flex items-center">
+                            <div class="w-full border-t border-gray-300"></div>
+                        </div>
+                        <div class="relative flex justify-center text-sm">
+                            <span class="px-4 bg-white text-gray-500">Atau daftar dengan</span>
+                        </div>
+                    </div>
+
+                    <!-- Social Register -->
+                    <button type="button" onclick="registerWithGoogle()" class="w-full flex items-center justify-center gap-3 px-4 py-3 border-2 border-gray-300 rounded-xl hover:bg-gray-50 transition">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M19.6 10.227c0-.709-.064-1.39-.182-2.045H10v3.868h5.382a4.6 4.6 0 01-1.996 3.018v2.51h3.232c1.891-1.742 2.982-4.305 2.982-7.35z" fill="#4285F4"/>
+                            <path d="M10 20c2.7 0 4.964-.895 6.618-2.423l-3.232-2.509c-.895.6-2.04.955-3.386.955-2.605 0-4.81-1.76-5.595-4.123H1.064v2.59A9.996 9.996 0 0010 20z" fill="#34A853"/>
+                            <path d="M4.405 11.9c-.2-.6-.314-1.24-.314-1.9 0-.66.114-1.3.314-1.9V5.51H1.064A9.996 9.996 0 000 10c0 1.614.386 3.14 1.064 4.49l3.34-2.59z" fill="#FBBC05"/>
+                            <path d="M10 3.977c1.468 0 2.786.505 3.823 1.496l2.868-2.868C14.959.99 12.695 0 10 0 6.09 0 2.71 2.24 1.064 5.51l3.34 2.59C5.19 5.736 7.395 3.977 10 3.977z" fill="#EA4335"/>
+                        </svg>
+                        <span class="font-medium text-gray-700">Daftar dengan Google</span>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Back to Home -->
+            <div class="text-center mt-6">
+                <a href="index.html" class="text-gray-600 hover:text-gray-900 flex items-center justify-center gap-2">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Kembali ke Beranda</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.querySelector('input[type="email"]').value;
+            setLoggedIn(email);
+            
+            alert('Pendaftaran berhasil!');
+            window.location.href = 'shop.html';
+        });
+
+        function registerWithGoogle() {
+            const btn = event.target.closest('button');
+            const originalHTML = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> <span class="ml-2">Menghubungkan ke Google...</span>';
+            btn.disabled = true;
+            
+            setTimeout(function() {
+                const googleEmail = prompt('Masukkan email Google Anda (Demo):', 'user@gmail.com');
+                
+                if (googleEmail) {
+                    setLoggedIn(googleEmail);
+                    alert('Pendaftaran dengan Google berhasil!\nEmail: ' + googleEmail);
+                    window.location.href = 'shop.html';
+                } else {
+                    btn.innerHTML = originalHTML;
+                    btn.disabled = false;
+                }
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
