@@ -23,3 +23,14 @@ SecondLife.id adalah platform e-commerce untuk jual beli barang bekas (secondhan
 2. Konfigurasi koneksi database Anda pada file di folder `config/`.
 3. Import database yang disediakan (jika ada file skema).
 4. Jalankan aplikasi di local server Anda (seperti XAMPP, Laragon, dsb).
+
+## Lisensi
+
+Proyek ini dibuat untuk keperluan edukasi dan dapat dimodifikasi sesuai kebutuhan. Deployed by Muhammad Mus'ab.
+
+## Kontak
+
+Untuk pertanyaan atau dukungan, silakan hubungi tim pengembang:
+
+- **Email**: mm240@ums.ac.id
+- **Instagram**: @msb.muss
