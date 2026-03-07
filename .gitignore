@@ -1,0 +1,30 @@
+# SecondLife.id - Git Ignore
+
+# Environment / Credentials
+config/env.php
+
+# XAMPP / Server
+.htaccess
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Uploads (jangan commit file upload user)
+uploads/*
+!uploads/.gitkeep
+
+# Kiro
+.kiro/
+
+# File buangan
+*.sql
+*.zip
+*.txt
+secondlife_project/
