@@ -1,44 +1,24 @@
-// Simple authentication system using localStorage
+// Authentication utility functions
+// Since we migrated to PHP Sessions, we no longer rely on localStorage for auth state.
 
-// Check if user is logged in
-function isLoggedIn() {
-    return localStorage.getItem('isLoggedIn') === 'true';
+function checkSellerAndRedirect() {
+    // Check via API or we can just rely on the PHP redirect
+    window.location.href = 'seller/dashboard.php';
 }
 
-// Set user as logged in
-function setLoggedIn(email) {
-    localStorage.setItem('isLoggedIn', 'true');
-    localStorage.setItem('userEmail', email);
+function openSellerRegistration() {
+    // Redirect to a PHP page or seller registration flow
+    window.location.href = 'register.php?role=seller';
 }
 
-// Logout user
 function logout() {
-    localStorage.removeItem('isLoggedIn');
-    localStorage.removeItem('userEmail');
-    window.location.href = 'index.html';
+    window.location.href = 'logout.php';
 }
 
-// Get user email
-function getUserEmail() {
-    return localStorage.getItem('userEmail') || 'user@example.com';
+function openNotificationsModal() {
+    alert("Fitur notifikasi akan segera hadir!");
 }
 
-// Check login and redirect
-function checkLoginAndRedirect(targetPage) {
-    if (isLoggedIn()) {
-        window.location.href = targetPage;
-    } else {
-        // Show alert and redirect to register
-        if (confirm('Anda harus login terlebih dahulu untuk mengakses fitur ini. Ingin mendaftar sekarang?')) {
-            window.location.href = 'register.html';
-        }
-    }
-}
-
-// Protect page - redirect to login if not logged in
-function protectPage() {
-    if (!isLoggedIn()) {
-        alert('Silakan login terlebih dahulu!');
-        window.location.href = 'login.html';
-    }
+function openMessagesModal() {
+    alert("Fitur pesan akan segera hadir!");
 }

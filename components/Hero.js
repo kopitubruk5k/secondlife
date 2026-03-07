@@ -1,7 +1,7 @@
 function Hero() {
     return `
-        <section style="background-color: #faf9f6;" class="py-6">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section class="py-6 bg-white">
+            <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
                 <!-- Main Banner with Logo -->
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
                     <!-- Banner -->
@@ -11,13 +11,13 @@ function Hero() {
                                 Kasih Hidup Kedua<br>Untuk Barangmu
                             </h1>
                             <p class="text-lg text-green-50 mb-4">
-                                Beli barang berkualitas. Jual tanpa ribet.
+                                Jual Beli Barang Bekas Cuma Sentuhan Jari
                             </p>
                             <div class="flex gap-3">
-                                <a href="#" onclick="checkLoginAndRedirect('shop.html'); return false;" class="px-6 py-3 bg-white text-green-600 font-semibold rounded-xl hover:bg-green-50 transition shadow-lg">
+                                <a href="user/shop.php" class="px-6 py-3 bg-white text-green-600 font-semibold rounded-xl hover:bg-green-50 transition shadow-lg">
                                     Belanja Sekarang
                                 </a>
-                                <a href="#" onclick="checkLoginAndRedirect('dashboard.html'); return false;" class="px-6 py-3 bg-green-700 text-white font-semibold rounded-xl hover:bg-green-800 transition shadow-lg border-2 border-white">
+                                <a href="#" onclick="checkSellerAndRedirect(); return false;" class="px-6 py-3 bg-green-700 text-white font-semibold rounded-xl hover:bg-green-800 transition shadow-lg border-2 border-white">
                                     Jual Barang
                                 </a>
                             </div>

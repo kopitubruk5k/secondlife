@@ -11,22 +11,29 @@ function CategoryCard({ icon, name }) {
 
 function Categories() {
     const categories = [
-        { icon: 'fas fa-mobile-alt', name: 'Elektronik' },
-        { icon: 'fas fa-tshirt', name: 'Fashion' },
-        { icon: 'fas fa-home', name: 'Rumah' },
-        { icon: 'fas fa-book', name: 'Buku' }
+        { icon: 'fas fa-tshirt', name: 'Fashion', link: 'shop.php?category=fashion' },
+        { icon: 'fas fa-mobile-alt', name: 'Elektronik', link: 'shop.php?category=elektronik' },
+        { icon: 'fas fa-recycle', name: 'Anorganik', link: 'shop.php?category=anorganik' },
+        { icon: 'fas fa-book', name: 'Buku', link: 'shop.php?category=buku' }
     ];
 
     return `
         <section class="py-8 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
                     <!-- Kategori Populer -->
                     <div class="lg:col-span-2">
                         <h2 class="text-xl font-bold text-gray-900 mb-4">Kategori Populer</h2>
                         <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
                             <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-                                ${categories.map(cat => CategoryCard(cat)).join('')}
+                                ${categories.map(cat => `
+                                    <a href="${cat.link}" class="bg-white p-4 rounded-xl hover:shadow-md transition cursor-pointer text-center border border-gray-100 hover:border-primary">
+                                        <div class="text-3xl mb-2 text-green-600">
+                                            <i class="${cat.icon}"></i>
+                                        </div>
+                                        <h3 class="text-sm font-medium text-gray-800">${cat.name}</h3>
+                                    </a>
+                                `).join('')}
                             </div>
                         </div>
                     </div>

@@ -1,8 +1,8 @@
 function WhyUs() {
     const features = [
         { icon: 'fas fa-shield-alt', title: 'Aman', subtitle: '(Escrow)' },
-        { icon: 'fas fa-check-circle', title: 'Hernal', subtitle: '' },
-        { icon: 'fas fa-leaf', title: 'Ranah Lingkungan', subtitle: '' },
+        { icon: 'fas fa-check-circle', title: 'Sustainable', subtitle: '' },
+        { icon: 'fas fa-leaf', title: 'Ramah Lingkungan', subtitle: '' },
         { icon: 'fas fa-certificate', title: 'Terverifikasi', subtitle: '' }
     ];
 
